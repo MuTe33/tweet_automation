@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tweet_automation/feature/counter/cubit/counter_cubit.dart';
-import 'package:tweet_automation/l10n/l10n.dart';
 
 class CounterPage extends StatelessWidget {
   const CounterPage({Key? key}) : super(key: key);
@@ -20,9 +19,8 @@ class CounterView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = context.l10n;
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.counterAppBarTitle)),
+      appBar: AppBar(title: Text('Demo App')),
       body: const Center(child: CounterText()),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -30,12 +28,7 @@ class CounterView extends StatelessWidget {
         children: [
           FloatingActionButton(
             onPressed: () => context.read<CounterCubit>().increment(),
-            child: const Icon(Icons.add),
-          ),
-          const SizedBox(height: 8),
-          FloatingActionButton(
-            onPressed: () => context.read<CounterCubit>().decrement(),
-            child: const Icon(Icons.remove),
+            child: const Text('🐦'),
           ),
         ],
       ),
