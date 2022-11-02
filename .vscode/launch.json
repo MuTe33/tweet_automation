@@ -9,7 +9,7 @@
       "request": "launch",
       "type": "dart",
       "program": "lib/init_app.dart",
-      "args": ["--flavor", "production", "--target", "lib/main_production.dart"]
+      "args": ["--flavor", "production", "--target", "lib/init_app.dart"]
     }
   ]
 }
