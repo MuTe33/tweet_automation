@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:tweet_automation/feature/counter/view/counter_page.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -17,7 +16,9 @@ class App extends StatelessWidget {
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
       ],
-      home: const CounterPage(),
+      home: const Scaffold(
+        body: Text('Hello'),
+      ),
     );
   }
 }
